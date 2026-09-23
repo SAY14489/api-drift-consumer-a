@@ -1,7 +1,8 @@
 // GraphQL queries using the mock API
 
-// Uses deprecated field Product.name (deprecated in 2026-04, removed in 2026-07)
-// Should be flagged as deprecating for 01→04, breaking for 04→07
+// Uses deprecated field Product.name (deprecated in 2026-04, still deprecated
+// with no further change through 2026-07, removed in 2026-10 - see BL-011)
+// Should be flagged as deprecating for 01→04, breaking for 07→10
 export const PRODUCT_QUERY_OLD = `
   query GetProduct($id: ID!) {
     product(id: $id) {
@@ -50,7 +51,7 @@ export const PRODUCT_QUERY_NEW = `
   }
 `;
 
-// Uses Order.customerEmail which gets removed in 2026-07
+// Uses Order.customerEmail which is unchanged through 2026-07, removed in 2026-10
 export const ORDER_QUERY = `
   query GetOrder($id: ID!) {
     order(id: $id) {
