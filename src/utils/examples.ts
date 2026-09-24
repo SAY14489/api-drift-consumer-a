@@ -13,7 +13,7 @@ export const getExamples = unstable_cache(
         Outil: { multi_select: { name: string }[] }
         Secteur: { select: { name: string } }
         Logo: { files: { file: { url: string } }[] }
-      }>('https://api.notion.com/v1/databases/ad7a6aa64a0641e08bb64e5f4010843e/query')
+      }>('https://api.notion.com/v1/data_sources/ad7a6aa64a0641e08bb64e5f4010843e/query')
 
       const examples: Record<string, Example> = {}
       results.forEach((result) => {
@@ -74,7 +74,7 @@ export const getCommunications = unstable_cache(
         Nom: { title: { plain_text: string }[] }
         Lien: { rich_text: { plain_text: string }[] }
         Logo: { files: { file: { url: string } }[] }
-      }>('https://api.notion.com/v1/databases/7a03ed1fdf8d4d03876e445be61abccf/query')
+      }>('https://api.notion.com/v1/data_sources/7a03ed1fdf8d4d03876e445be61abccf/query')
 
       return results.map((result) => ({
         name: result.properties.Nom.title.map((text) => text.plain_text).join(''),
