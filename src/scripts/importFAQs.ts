@@ -88,7 +88,7 @@ const importFromNotion = async () => {
     Ancre: { select: { name: string } }
     Categorie: { select: { name: FAQCategory } }
     Langage: { select: { name: string } }
-  }>('https://api.notion.com/v1/databases/f21b76594988440c98fc153d73ad5730/query')
+  }>('https://api.notion.com/v1/data_sources/f21b76594988440c98fc153d73ad5730/query')
 
   const contentById: { id: string; content: ExtendedRecordMap | undefined }[] = []
   console.log(`Importing ${results.length} FAQs from Notion`)
