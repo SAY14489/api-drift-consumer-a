@@ -10,7 +10,7 @@ export const getGuideUtilisation = unstable_cache(
       const results = await getAllNotionDB<{
         Name: { title: { plain_text: string }[] }
         Order: { number: number }
-      }>('https://api.notion.com/v1/databases/81cb9bd7e22d46cdb153b113bf005418/query')
+      }>('https://api.notion.com/v1/data_sources/81cb9bd7e22d46cdb153b113bf005418/query')
 
       const contents = await Promise.all(
         results.map(async (result) => {
