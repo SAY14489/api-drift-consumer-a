@@ -1,8 +1,13 @@
 {
-  "name": "fixture-a",
+  "name": "impactco2-notion-consumer",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
+  "description": "5 real files copied from incubateur-ademe/impactco2 (MIT), commit a948fbeb0800d09fd292b307350c6428cde74478, for api-drift's real-world backtest of a repo-wide Notion API migration. Not a runnable app - only enough to exercise the indexer/planner/transformer/forge pipeline against real, unmodified source.",
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "axios": "^1.16.0",
+    "zod": "^4.4.3",
+    "next": "^16.2.6",
+    "notion-client": "^7.12.0",
+    "notion-types": "^7.12.0"
   }
 }
